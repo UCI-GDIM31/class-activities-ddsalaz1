@@ -14,6 +14,22 @@ This is because it's an integer. The code can't calculate for half a bounce or .
 ### Question 3
 The error you got after Step 4 of Part 2 told you something useful about why that line of code was broken- what was it?
 Not going to lie I kind of worked past it so I don't remember the exact error. I went back and fixed some compiler errors I saw in the console and they were things like missing semi-colons, "f" floats after numbers, improper variable spelling. Also I had an issue with the blue rgb value not changing from  0, which I was able to see in the console, so I altered some of the code.
+### W3
+Table 18:
+
+### Question 3
+Using UnityEngine;
+
+public class SetLightDimness : Monobehavior
+
+public void Update()
+
+private void SetLightDimness (float sanity) {
+    float light = 100 * sanity;
+}
+### MonoBehavior coding activity
+1.CLasses are a subbranch/name/action to a script, the script is a component to an object, and the opject goes into the scene, etc. Methods and members are just even smaller branches that go into the classes that "tell" the class what it does. MonoBehavior enacts it or tells unity that it "does" this thing. I think of it as a Matryoshka doll. The classes keep getting nested within each other.
+2.There  is no cap to the brightness or color increase. I think it just goes to white.
 ## Open-Source Assets
 ### W1
 - Animals: https://assetstore.unity.com/packages/3d/characters/animals/animals-free-animated-low-poly-3d-models-260727 
