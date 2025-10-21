@@ -27,6 +27,15 @@ public void Update()
 private void SetLightDimness (float sanity) {
     float light = 100 * sanity;
 }
+### W4
+line 5 sets the move speed, line 22 sets the inputs attributes like speed and the time between each frame activation. 25 changes the positioning based off of the input vertically.
+    move speed is a member variable, and the type is float
+    line 25's transform is a Component
+    transform is calling a method translate
+    the method parameters are (0,0,translation)
+
+
+
 ### MonoBehavior coding activity
 1.CLasses are a subbranch/name/action to a script, the script is a component to an object, and the opject goes into the scene, etc. Methods and members are just even smaller branches that go into the classes that "tell" the class what it does. MonoBehavior enacts it or tells unity that it "does" this thing. I think of it as a Matryoshka doll. The classes keep getting nested within each other.
 2.There  is no cap to the brightness or color increase. I think it just goes to white.
