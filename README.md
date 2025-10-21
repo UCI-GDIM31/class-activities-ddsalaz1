@@ -34,6 +34,11 @@ line 5 sets the move speed, line 22 sets the inputs attributes like speed and th
     transform is calling a method translate
     the method parameters are (0,0,translation)
 
+### What solution did you come up with for the collider activity, and why? and which object(s) did you check Is Trigger on?
+
+In physics a rigid body is a piece of mass that reacts to external forces. cat and ball are rigid bodies. The Goal keeps track of points, which is on trigger
+
+
 
 
 ### MonoBehavior coding activity
