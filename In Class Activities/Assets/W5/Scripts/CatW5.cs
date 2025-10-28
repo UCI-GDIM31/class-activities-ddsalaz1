@@ -8,11 +8,12 @@ public class CatW5 : MonoBehaviour
     [SerializeField] private Animator _animator;
 
     private string _isWalkingName = "IsWalking";
-
+    private float _flipWs; 
     private void Update()
     {
         // STEP 1 & 2 ---------------------------------------------------------
         // STEP 1
+
         // This CatW5 class is a Component on the Cat GameObject. It controls
         //      the cat's movement.
         //
@@ -31,7 +32,30 @@ public class CatW5 : MonoBehaviour
         //          changing that axis?
         //      Should I modify translation with Vector addition, or multiplication,
         //          or both?
-        //
+        
+        
+        
+        Vector3 movement = Vector3.zero;
+
+         if (_flipWSControls){
+            _flipWs = -1;
+        }
+        else
+        {
+            _flipWs = 1;
+        }
+
+        Vector3 translation = Vector3.zero;
+
+        if (Input.GetKey(KeyCode.W))
+        {
+            movement.z =  _flipWs * 1;
+        }
+        else if (Input.GetKey(KeyCode.S)){
+            movement.z =  _flipWs * -1;
+        }
+        transform.Translate(movement * _moveSpeed * Time.deltaTime);
+        
         // STEP 2
         // After Step 1 is working, add more code to make it possible to flip
         //      the player's control scheme.
@@ -43,11 +67,12 @@ public class CatW5 : MonoBehaviour
         //
         // MULTIPLY one of your vectors with a certain value to do this. >:)
 
-        Vector3 translation = Vector3.zero;
+
         
 
 
         // STEP 1 & 2 ---------------------------------------------------------
+        
 
         float rotation = Input.GetAxis("Horizontal") * _turnSpeed * Time.deltaTime;
         transform.Rotate(0, rotation, 0);
