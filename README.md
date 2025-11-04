@@ -34,12 +34,16 @@ line 5 sets the move speed, line 22 sets the inputs attributes like speed and th
     transform is calling a method translate
     the method parameters are (0,0,translation)
 
+
+### W5
 ### What solution did you come up with for the collider activity, and why? and which object(s) did you check Is Trigger on?
 
 In physics a rigid body is a piece of mass that reacts to external forces. cat and ball are rigid bodies. The Goal keeps track of points, which is on trigger
 
+### W6
+We need a public method to chase the player and get its transform. We need it also for stoping the chase. We need movement in update for each frame. We need variables speed, playerTransform, inchase. We need methods update, chase player, stop chasing palyer
 
-
+link to doc for class: https://docs.google.com/document/d/1IZFJUcFgjnf2ph_xvqjTaqAltUuFe4KMaDIYs-4cPV8/edit?usp=sharing
 
 ### MonoBehavior coding activity
 1.CLasses are a subbranch/name/action to a script, the script is a component to an object, and the opject goes into the scene, etc. Methods and members are just even smaller branches that go into the classes that "tell" the class what it does. MonoBehavior enacts it or tells unity that it "does" this thing. I think of it as a Matryoshka doll. The classes keep getting nested within each other.
