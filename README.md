@@ -48,6 +48,8 @@ link to doc for class: https://docs.google.com/document/d/1IZFJUcFgjnf2ph_xvqjTa
 ### W7
 https://docs.google.com/document/d/1FI6_2kwBTTaRBxAmNkWfBAGIedIvuOI0K7P5KUZhsA8/edit?usp=sharing
 
+I wrote the physics and animation section. I also wrote question 1 on the bottom and the last paragraph at the end.
+
 what was wrong with the code in Step 2?
 It should be transform.position because we care more about the change in the position of the player. We're changing things related to the position.
 
