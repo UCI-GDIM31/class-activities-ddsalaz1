@@ -48,6 +48,9 @@ link to doc for class: https://docs.google.com/document/d/1IZFJUcFgjnf2ph_xvqjTa
 ### W7
 https://docs.google.com/document/d/1FI6_2kwBTTaRBxAmNkWfBAGIedIvuOI0K7P5KUZhsA8/edit?usp=sharing
 
+Plan:
+Rotate Vector array for up, make sure to put vertical input, transform the axis direction for rotation and direction, use the line in the slidesm make a boolean for both cases for detecting velocity, set up boolean to play when specific motion is happening, idle animation, jumping animation.
+
 I wrote the physics and animation section. I also wrote question 1 on the bottom and the last paragraph at the end.
 
 what was wrong with the code in Step 2?
