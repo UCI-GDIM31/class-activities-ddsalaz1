@@ -45,6 +45,12 @@ We need a public method to chase the player and get its transform. We need it al
 
 link to doc for class: https://docs.google.com/document/d/1IZFJUcFgjnf2ph_xvqjTaqAltUuFe4KMaDIYs-4cPV8/edit?usp=sharing
 
+### W7
+https://docs.google.com/document/d/1FI6_2kwBTTaRBxAmNkWfBAGIedIvuOI0K7P5KUZhsA8/edit?usp=sharing
+
+what was wrong with the code in Step 2?
+It should be transform.position because we care more about the change in the position of the player. We're changing things related to the position.
+
 ### MonoBehavior coding activity
 1.CLasses are a subbranch/name/action to a script, the script is a component to an object, and the opject goes into the scene, etc. Methods and members are just even smaller branches that go into the classes that "tell" the class what it does. MonoBehavior enacts it or tells unity that it "does" this thing. I think of it as a Matryoshka doll. The classes keep getting nested within each other.
 2.There  is no cap to the brightness or color increase. I think it just goes to white.

@@ -44,8 +44,11 @@ public class MuskratW7 : MonoBehaviour
         // Transform.RotateAround () https://docs.unity3d.com/6000.0/Documentation/ScriptReference/Transform.RotateAround.html
         //
         // You might want to look below Step 3 for an example :D
-        
+
         float leftright = Input.GetAxis("Horizontal");
+
+        Vector3 upAxis = transform.TransformDirection(Vector3.up);
+        transform.RotateAround(_sphereTransform.position, upAxis, leftright * _rotationSpeed * Time.deltaTime);
         
 
 
@@ -68,6 +71,10 @@ public class MuskratW7 : MonoBehaviour
 
 
         // STEP 5 -------------------------------------------------------------
+        _animator.SetBool("flying", false);
+        _animator.SetFloat("running", Mathf.Abs(forward));
+
+
     }
 
     // ------------------------------------------------------------------------
@@ -88,19 +95,18 @@ public class MuskratW7 : MonoBehaviour
         float leftright = Input.GetAxis("Horizontal");
 
         // STEP 1 -------------------------------------------------------------
-
-
+        transform.Rotate(Vector3.up * leftright * _rotationSpeed * Time.deltaTime);
         // STEP 2 -------------------------------------------------------------
         float movement = Input.GetAxis("Vertical");
 
         // This line of code is incorrect. 
         // Replace it with a different line of code that uses 'movement' to
         //      move the Muskrat forwards and backwards.
-        transform.position += movement * Vector3.forward * _moveSpeed * Time.deltaTime;
+        transform.position += movement * transform.forward * _moveSpeed * Time.deltaTime;
 
         // STEP 2 -------------------------------------------------------------
 
-
+        
         // STEP 4 -------------------------------------------------------------
         // Change the "flying" and "running" parameters on the Animator based
         //      on the Muskrat's movement to animate the Muskrat.
@@ -110,6 +116,8 @@ public class MuskratW7 : MonoBehaviour
 
         
         // STEP 4 -------------------------------------------------------------
+        _animator.SetBool("flying", _rigidbody.linearVelocity.y > 0.1f || _rigidbody.linearVelocity.y < -0.1f);
+        _animator.SetFloat("running", Mathf.Abs(movement));
     }
 
     // ------------------------------------------------------------------------
